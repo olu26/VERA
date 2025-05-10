@@ -2,8 +2,16 @@
     "version": 2,
     "routes": [
         {
-        "src": "/(.*)",
-        "dest": "/src/index.html"
+            "src": "/script\\.js",
+            "dest": "/src/script.js"
+        },
+        {
+            "src": "/style\\.css",
+            "dest": "/src/style.css"
+        },
+        {
+            "src": "/(.*)",
+            "dest": "/src/index.html"
         }
     ]
 }
