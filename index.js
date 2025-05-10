@@ -18,11 +18,7 @@ app.use((err, req, res, next) => {
   next();
 });
 
-app.use(express.static('public'));
-
-app.get('/', (req, res) => {
-  res.json({ message: 'Welcome to the Vera API!' });
-});
+app.use(express.static('src'));
 
 app.post('/api/chat', async (req, res) => {
   if (!req.body.message) {
