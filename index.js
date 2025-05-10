@@ -20,6 +20,10 @@ app.use((err, req, res, next) => {
 
 app.use(express.static('public'));
 
+app.get('/', (req, res) => {
+  res.json({ message: 'Welcome to the Vera API!' });
+});
+
 app.post('/api/chat', async (req, res) => {
   if (!req.body.message) {
     return res.status(400).json({ error: 'Missing message in request body' });
